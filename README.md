@@ -1,7 +1,7 @@
 # inline_colorization
-add the library through writing in the command prompt:
+Copy and paste the library through writing in Cargo.toml under dependencies:
 ```
-cargo add inline_colorization
+inline_colorization = { git = "https://github.com/d4140n-4h3-1/inline_colorization.git" }
 ```
 And in you main.rs file:
 ```
@@ -9,12 +9,14 @@ use inline_colorization::*;
 ```
 Then you can run:
 ```
-println!("Lets the user {color_red}colorize{color_reset} and {style_underline}style the output{style_reset} text using inline variables");
+println!("Lets the user {fg_red}colorize{fg_reset} and {style_underline}style the output{style_reset} text using inline variables");
 ```
 | Text Style Variables |
 |----------------------|
 | style_bold           |
 | style_underline      |
+| style_italics        |
+| style_blink          |
 | style_reset          |
 
 
