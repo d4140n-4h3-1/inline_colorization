@@ -20,23 +20,23 @@ println!("Lets the user {color_red}colorize{color_reset} and {style_underline}st
 
 | Text Color Variables |
 |----------------------|
-| color_black          |
-| color_red            |
-| color_green          |
-| color_yellow         |
-| color_blue           |
-| color_magenta        |
-| color_cyan           |
-| color_white          |
-| color_bright_black   |
-| color_bright_red     |
-| color_bright_green   |
-| color_bright_yellow  |
-| color_bright_blue    |
-| color_bright_magenta |
-| color_bright_cyan    |
-| color_bright_white   |
-| color_reset          |
+| fg_black             |
+| fg_red               |
+| fg_green             |
+| fg_yellow            |
+| fg_blue              |
+| fg_magenta           |
+| fg_cyan              |
+| fg_white             |
+| fg_b_black           |
+| fg_b_red             |
+| fg_b_green           |
+| fg_b_yellow          |
+| fg_b_blue            |
+| fg_b_magenta         |
+| fg_b_cyan            |
+| fg_b_white           |
+| fg_reset             |
 
 
 | Text Background Variables |
@@ -49,14 +49,14 @@ println!("Lets the user {color_red}colorize{color_reset} and {style_underline}st
 | bg_magenta                |
 | bg_cyan                   |
 | bg_white                  |
-| bg_bright_black           |
-| bg_bright_red             |
-| bg_bright_green           |
-| bg_bright_yellow          |
-| bg_bright_blue            |
-| bg_bright_magenta         |
-| bg_bright_cyan            |
-| bg_bright_white           |
+| bg_b_black                |
+| bg_b_red                  |
+| bg_b_green                |
+| bg_b_yellow               |
+| bg_b_blue                 |
+| bg_b_magenta              |
+| bg_b_cyan                 |
+| bg_b_white                |
 | bg_reset                  |
 
 Just remember to reset the style, color or background when you want the default text setting
