@@ -1,29 +1,36 @@
 use inline_colorization::*;
 
 fn main() {
+  println!("{rgb} whatever the fuck this is{fg_reset}");
+
+  println!("{apost}apostrophe{apost}");
+  println!("{quote}Quotation{quote}");
+
   println!("no_style");
 
   // styles
   println!("{style_bold}style_bold{style_reset}");
   println!("{style_underline}style_underline{style_reset}");
+  println!("{style_italics}style_italics{style_reset}");
+  println!("{style_blink}style_blink{style_reset}");
 
   // colors
-  println!("{bg_white}{color_black}color_black{color_reset}{bg_reset}");
-  println!("{color_red}color_red{color_reset}");
-  println!("{color_green}color_green{color_reset}");
-  println!("{color_yellow}color_yellow{color_reset}");
-  println!("{color_blue}color_blue{color_reset}");
-  println!("{color_magenta}color_magenta{color_reset}");
-  println!("{color_cyan}color_cyan{color_reset}");
-  println!("{color_white}color_white{color_reset}");
-  println!("{bg_white}{color_bright_black}color_bright_black{color_reset}{bg_reset}");
-  println!("{color_bright_red}color_bright_red{color_reset}");
-  println!("{color_bright_green}color_bright_green{color_reset}");
-  println!("{color_bright_yellow}color_bright_yellow{color_reset}");
-  println!("{color_bright_blue}color_bright_blue{color_reset}");
-  println!("{color_bright_magenta}color_bright_magenta{color_reset}");
-  println!("{color_bright_cyan}color_bright_cyan{color_reset}");
-  println!("{color_bright_white}color_bright_white{color_reset}");
+  println!("{bg_white}{fg_black}color_black{fg_reset}{bg_reset}");
+  println!("{fg_red}fg_red{fg_reset}");
+  println!("{fg_green}fg_green{fg_reset}");
+  println!("{fg_yellow}fg_yellow{fg_reset}");
+  println!("{fg_blue}fg_blue{fg_reset}");
+  println!("{fg_magenta}fg_magenta{fg_reset}");
+  println!("{fg_cyan}fg_cyan{fg_reset}");
+  println!("{fg_white}fg_white{fg_reset}");
+  println!("{fg_white}{fg_b_black}fg_b_black{fg_reset}{bg_reset}");
+  println!("{fg_b_red}fg_b_red{fg_reset}");
+  println!("{fg_b_green}fg_b_green{fg_reset}");
+  println!("{fg_b_yellow}fg_b_yellow{fg_reset}");
+  println!("{fg_b_blue}fg_b_blue{fg_reset}");
+  println!("{fg_b_magenta}fg_b_magenta{fg_reset}");
+  println!("{fg_b_cyan}fg_b_cyan{fg_reset}");
+  println!("{fg_b_white}fg_b_white{fg_reset}");
 
   // backgrounds
   println!("{bg_black}bg_black{bg_reset}");
@@ -33,13 +40,24 @@ fn main() {
   println!("{bg_blue}bg_blue{bg_reset}");
   println!("{bg_magenta}bg_magenta{bg_reset}");
   println!("{bg_cyan}bg_cyan{bg_reset}");
-  println!("{color_black}{bg_white}bg_white{bg_reset}{color_reset}");
-  println!("{bg_bright_black}bg_bright_black{bg_reset}");
-  println!("{bg_bright_red}bg_bright_red{bg_reset}");
-  println!("{bg_bright_green}bg_bright_green{bg_reset}");
-  println!("{bg_bright_yellow}bg_bright_yellow{bg_reset}");
-  println!("{bg_bright_blue}bg_bright_blue{bg_reset}");
-  println!("{bg_bright_magenta}bg_bright_magenta{bg_reset}");
-  println!("{bg_bright_cyan}bg_bright_cyan{bg_reset}");
-  println!("{color_black}{bg_bright_white}bg_bright_white{bg_reset}{color_reset}");
+  println!("{fg_black}{bg_white}bg_white{bg_reset}{fg_reset}");
+  println!("{bg_b_black}bg_b_black{bg_reset}");
+  println!("{bg_b_red}bg_b_red{bg_reset}");
+  println!("{bg_b_green}bg_b_green{bg_reset}");
+  println!("{bg_b_yellow}bg_b_yellow{bg_reset}");
+  println!("{bg_b_blue}bg_b_blue{bg_reset}");
+  println!("{bg_b_magenta}bg_b_magenta{bg_reset}");
+  println!("{bg_b_cyan}bg_b_cyan{bg_reset}");
+  println!("{fg_black}{bg_b_white}bg_b_white{bg_reset}{fg_reset}");
+
+  // other
+
+  let warning = fg_b_yellow.to_owned() + style_bold + style_blink;
+  let error = fg_red.to_owned() + style_bold + style_blink;
+  let success = fg_cyan.to_owned() + style_bold;
+  let full_reset = fg_reset.to_owned() + style_reset;
+  println!("{warning}warning{full_reset}");
+  println!("{success}success{full_reset}");
+  println!("{error}error{full_reset}");
+  println!("test_line");
 }
